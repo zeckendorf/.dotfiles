@@ -47,10 +47,6 @@ if command -v fortune &>/dev/null; then
     fi
 fi
 
-# Setup dircolors
-if [[ -d ~/.dircolors-solarized ]]; then
-    eval `gdircolors ~/.dircolors-solarized/dircolors.256dark`
-fi
 
 # Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
 stty start undef stop undef

@@ -29,7 +29,6 @@ alias dev="tmux_create_or_attach dev"
 
 # use GNU ls if it exists and we're on OS X
 command -v gls >/dev/null 2>&1 && alias ls="gls -F --color=auto"
-command -v gdircolors >/dev/null 2>&1 && alias dircolors="gdircolors"
 
 # List all files colorized in long format
 alias l="ls -l"

@@ -297,12 +297,9 @@ endif
 
 " Set colorscheme last in case a bundle needs to load
 try
-    colorscheme jellybeans
+    colorscheme tomorrow-night
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme elflord
 endtry
 
 
-" Source extra shortcuts for rails
-source $HOME/.vim/test_runners.vim
-source $HOME/.vim/rails_shortcuts.vim

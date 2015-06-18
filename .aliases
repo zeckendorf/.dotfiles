@@ -53,6 +53,7 @@ alias sl="ls"
 alias sudo='sudo '
 
 # Git shortcuts
+alias glog='git log --name-status --graph'
 alias gs='git status'
 alias gpom='git push origin master'
 alias gfo='git fetch origin'
@@ -154,3 +155,7 @@ alias where="hostname"
 alias why="echo because..."
 
 alias ocaml="rlwrap /usr/local/bin/ocaml"
+
+alias python32="arch -i386 python"
+
+alias please='sudo $(history -p \!\!)' 

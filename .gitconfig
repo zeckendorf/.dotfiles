@@ -92,5 +92,5 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 [user]
-	name = Twilight Sparkle (change me in .gitconfig)
-	email = email@example.com
+	name = Sam Zeckendorf
+	email = szeckendorf@nestlabs.com

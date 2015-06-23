@@ -241,7 +241,7 @@ Bundle 'file-line'
 Bundle 'dccmx/vim-lemon-syntax'
 
 " colors
-Bundle 'nanotech/jellybeans.vim'
+Bundle 'Tomorrow-Night-Bright.vim'
 
 if has('ruby')
     Bundle 'wincent/Command-T'

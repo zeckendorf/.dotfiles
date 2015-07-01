@@ -17,6 +17,10 @@ alias s="cd ~/Source"
 alias o="open"
 alias oo="open ."
 
+# serial comms
+alias mc="minicom -c on -D "
+
+
 # tmux environments
 alias dev="tmux_create_or_attach dev"
 

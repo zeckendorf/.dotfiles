@@ -20,6 +20,9 @@ alias oo="open ."
 # serial comms
 alias mc="minicom -c on -D "
 
+# volume command wrappers
+alias mute="osascript -e 'set volume 0'"
+alias blast="osascript -e 'set volume 10'"
 
 # tmux environments
 alias dev="tmux_create_or_attach dev"

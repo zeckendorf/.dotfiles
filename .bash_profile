@@ -50,3 +50,4 @@ fi
 
 # Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
 stty start undef stop undef
+

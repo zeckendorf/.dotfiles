@@ -18,6 +18,7 @@ alias o="open"
 alias oo="open ."
 
 # tmux environments
+
 alias dev="tmux_create_or_attach dev"
 
 # Detect which `ls` flavor is in use
@@ -28,9 +29,11 @@ alias dev="tmux_create_or_attach dev"
 # fi
 
 # use GNU ls if it exists and we're on OS X
-command -v gls >/dev/null 2>&1 && alias ls="gls -F --color=auto"
+command -v gls >/dev/null 2>&1 
 
 # List all files colorized in long format
+alias ls="gls --color=auto"
+
 alias l="ls -l"
 
 # List all files colorized in long format, including dot files
@@ -158,4 +161,6 @@ alias ocaml="rlwrap /usr/local/bin/ocaml"
 
 alias python32="arch -i386 python"
 
-alias please='sudo $(history -p \!\!)' 
+alias please='sudo $(history -p \!\!)'
+
+alias mc='minicom -c on -D '

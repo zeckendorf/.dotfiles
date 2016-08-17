@@ -156,11 +156,9 @@ alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 alias where="hostname"
 alias why="echo because..."
-
 alias ocaml="rlwrap /usr/local/bin/ocaml"
-
 alias python32="arch -i386 python"
-
 alias please='sudo $(history -p \!\!)'
-
 alias mc='minicom -c on -D '
+alias chinavpn='ovpn --openvpn_server 180.168.218.170' #shanghai
+alias killovpn="sudo kill -9 $(ps aux | grep 'vpn' | awk '{print $2}')"

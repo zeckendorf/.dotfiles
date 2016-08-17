@@ -1,4 +1,4 @@
-# jenrzzz’s dotfiles
+# szecke01's dotfiles
 adapted from [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 
 ## Installation

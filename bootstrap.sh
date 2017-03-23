@@ -4,7 +4,7 @@ cd $STARTWD
 STARTWD=`pwd`
 
 echo -n "Updating dotfiles... "
-git pull --quiet origin master
+git pull --quiet origin feature/workrc
 echo "done"
 declare -a link_files=(.ackrc .aliases .bash_login .bash_profile .bash_prompt .bashrc .brew .dircolors.256dark .exports .functions \
 		       .gemrc .gitattributes .gitconfig .gitignore .gvimrc .hgignore .inputrc .path .screenrc .tmux.conf .vimrc .wgetrc \

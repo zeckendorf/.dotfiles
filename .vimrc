@@ -71,11 +71,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 			   \ 'passive_filetypes': ['puppet', 'java'] }
 
 " Centralize backups, swapfiles, and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-    set undodir=~/.vim/undo
-endif
+" set backupdir=~/.vim/backups
+" set directory=~/.vim/swaps
+" if exists("&undodir")
+"     set undodir=~/.vim/undo
+" endif
 
 " Enable all mouse functions if possible
 if has('mouse')

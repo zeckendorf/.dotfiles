@@ -162,3 +162,6 @@ alias please='sudo $(history -p \!\!)'
 alias mc='minicom -c on -D '
 alias chinavpn='ovpn --openvpn_server 180.168.218.170' #shanghai
 alias killovpn="sudo kill -9 $(ps aux | grep 'vpn' | awk '{print $2}')"
+
+# for allegro viewer
+alias avp="wine ~/.wine/drive_c/Program\ Files/Cadence\ Design\ Systems/Allegro\ Free\ Physical\ Viewers\ 16.6/tools/pcb/bin/allegro_free_viewer.exe"

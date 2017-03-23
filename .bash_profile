@@ -47,6 +47,12 @@ if command -v fortune &>/dev/null; then
     fi
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/zeck/Documents/Personal/google-cloud/google-cloud-sdk/path.bash.inc ]; then
+  source '/Users/zeck/Documents/Personal/google-cloud/google-cloud-sdk/path.bash.inc'
+fi
 
-# Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
-stty start undef stop undef
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/zeck/Documents/Personal/google-cloud/google-cloud-sdk/completion.bash.inc ]; then
+  source '/Users/zeck/Documents/Personal/google-cloud/google-cloud-sdk/completion.bash.inc'
+fi

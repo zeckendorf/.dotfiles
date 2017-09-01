@@ -32,7 +32,7 @@ alias dev="tmux_create_or_attach dev"
 command -v gls >/dev/null 2>&1 
 
 # List all files colorized in long format
-alias ls="gls --color=auto"
+alias ls="ls -G"
 alias l="ls -l"
 alias lsusb="system_profiler SPUSBDataType"
 

@@ -94,3 +94,5 @@
 [user]
 	name = Sam Zeckendorf
 	email = szeckendorf@nestlabs.com
+[http]
+	cookiefile = /Users/zeck/.gitcookies

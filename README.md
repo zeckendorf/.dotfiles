@@ -1,5 +1,5 @@
-# jenrzzz’s dotfiles
-adapted from [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+# szecke01’s dotfiles
+adapted from [jenrzzz](https://github.com/jenrzzz/dotfiles)
 
 ## Installation
 ### Using Git and the bootstrap script
@@ -8,7 +8,7 @@ Clone this repo to ~/.dotfiles, then run bootstrap.sh to symlink everything to t
 
 ### Sensible OS X defaults
 
-When setting up a new Mac, you may want to set some sensible OS X defaults:
+Though I prefer not to, when setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```bash
 ./.osx

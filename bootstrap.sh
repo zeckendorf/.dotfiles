@@ -51,6 +51,8 @@ function install_vundle() {
     if [[ ! -d ~/.vim/bundle ]]; then
 	echo "\nIt looks like vim might not be installed, but we'll dump vundle in ~/.vim/bundle anyways."
 	mkdir -p ~/.vim/bundle
+        mkdir -p ~/.vim/swaps
+        mkdir -p ~/.vim/backups
     fi
     git clone --quiet https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 }

@@ -1,6 +1,6 @@
 " ~/.vimrc
 " a mutated mash-up of countless other dotfiles
-" by jenrzzz
+" by szecke01
 
 set nocompatible                " get rid of strict vi compatibility!
 set number                      " line numbering on

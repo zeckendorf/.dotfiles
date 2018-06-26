@@ -8,7 +8,7 @@ git pull --quiet origin master
 echo "done"
 declare -a link_files=(.ackrc .aliases .bash_login .bash_profile .bash_prompt .bashrc .brew .dircolors.256dark .exports .functions \
 		       .gemrc .gitattributes .gitconfig .gitignore .gvimrc .hgignore .inputrc .path .screenrc .tmux.conf .vimrc .wgetrc \
-		       .zlogin .zshrc)
+		       .zlogin .zshrc .sshrc)
 
 function doIt() {
     touch ~/.hushlogin

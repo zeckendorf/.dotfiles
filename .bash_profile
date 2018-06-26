@@ -6,6 +6,11 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# git autocomplete
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -46,7 +51,6 @@ if command -v fortune &>/dev/null; then
 	fortune
     fi
 fi
-
 
 # Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
 stty start undef stop undef

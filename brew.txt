@@ -1,0 +1,15 @@
+bash-completion
+gdbm
+git
+htop
+libevent
+lxc
+openssl
+python
+python@2
+readline
+reattach-to-user-namespace
+sqlite
+sshrc
+tmux
+xz

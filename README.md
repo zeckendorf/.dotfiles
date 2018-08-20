@@ -27,3 +27,4 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 - Run ```:BundleInstall``` to install bundles in vim
 - [Install powerline](https://powerline.readthedocs.org/en/latest/installation/osx.html#installation-osx)
 - Reinstall vim with clipboard support with ```brew install vim --enable-clipboard```
+- .sshrc file requires [sshrc](https://github.com/Russell91/sshrc)

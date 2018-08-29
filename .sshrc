@@ -59,7 +59,7 @@ function parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[${BOLD}${ORANGE}\]\u\[$WHITE\] in \[$MAGENTA\]\h\[$WHITE\]:\[$CYAN\]\w\[$GREEN\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GREEN\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
+export PS1="\[${BOLD}${ORANGE}\]\u\[$WHITE\] in \[$CYAN\]\h\[$WHITE\]:\[$MAGENTA\]\w\[$GREEN\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GREEN\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
 
 # git autocomplete
 if [ -f ~/.git-completion.bash ]; then
@@ -109,3 +109,4 @@ fi
 
 # Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
 stty start undef stop undef
+

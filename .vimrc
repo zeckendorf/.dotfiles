@@ -291,6 +291,9 @@ if has("autocmd")
     au BufRead,BufNewFile *.rb set shiftwidth=2
     au BufRead,BufNewFile *.rb set softtabstop=2
 
+    au BufRead,BufNewFile *.py set shiftwidth=4
+    au BufRead,BufNewFile *.py set softtabstop=4
+
     au BufRead,BufNewFile *.re2c set ft=c
     au BufRead,BufNewFile *.haml set ft=haml
 endif

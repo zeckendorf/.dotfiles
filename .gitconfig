@@ -93,6 +93,6 @@
 	insteadOf = "gist:"
 [user]
 	name = Sam Zeckendorf
-	email = sam@zeckendorf.me
+	email = Sam.Zeckendorf@spacex.com
 [http]
 	cookiefile = /Users/zeck/.gitcookies

@@ -1,4 +1,4 @@
-# szecke01’s dotfiles
+# zeckendorf’s linux dotfiles
 adapted from [jenrzzz](https://github.com/jenrzzz/dotfiles)
 
 ## Installation

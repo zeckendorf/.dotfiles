@@ -6,6 +6,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# remap keyboard (for xfce)
+/usr/bin/setxkbmap -option "ctrl:nocaps" 
+
 # git autocomplete
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash

@@ -109,4 +109,4 @@ fi
 
 # Unmap Ctrl-S and Ctrl-Q so that they'll work in vim
 stty start undef stop undef
-
+export VIMINIT="let \$MYVIMRC='$SSHHOME/.sshrc.d/.vim/.vimrc' | source \$MYVIMRC"

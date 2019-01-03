@@ -58,6 +58,9 @@ set shortmess=atI               " Skip intro message
 set title                       " Show filename in titlebar
 let &titleold=getcwd()          " Set the xterm title to the cwd on exit
 
+" makdown fences
+let g:markdown_fenced_languages = ['python', 'tex']
+
 " powerline stuff
 let g:Powerline_symbols = 'fancy' " use fancy powerline
 let g:Powerline_stl_path_style = 'relative'
@@ -103,12 +106,13 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-" Show syntax
-syntax on
-
 " Edit the temp crontab in place when we do crontab -e
 au FileType crontab set nobackup nowritebackup
 set backupskip=/tmp/*,/private/tmp/*
+
+" Show syntax
+syntax on
+
 
 "" Keymaps
 "" -------
@@ -241,7 +245,7 @@ Bundle 'file-line'
 Bundle 'dccmx/vim-lemon-syntax'
 
 " colors
-Bundle 'Tomorrow-Night-Bright.vim'
+"Bundle 'Tomorrow-Night-Bright.vim'
 
 if has('ruby')
     Bundle 'wincent/Command-T'

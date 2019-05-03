@@ -61,17 +61,14 @@ let &titleold=getcwd()          " Set the xterm title to the cwd on exit
 " makdown fences
 let g:markdown_fenced_languages = ['python', 'tex']
 
-" powerline stuff
-let g:Powerline_symbols = 'fancy' " use fancy powerline
-let g:Powerline_stl_path_style = 'relative'
 
 " not old sh highlighting
 let g:is_bash = 1
 
 " configure when syntastic should run
 let g:syntastic_mode_map = { 'mode': 'active',
-			   \ 'active_filetypes': [],
-			   \ 'passive_filetypes': ['puppet', 'java'] }
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['puppet', 'java'] }
 
 " Centralize backups, swapfiles, and undo history
 set backupdir=~/.vim/backups
@@ -110,9 +107,8 @@ set softtabstop=4
 au FileType crontab set nobackup nowritebackup
 set backupskip=/tmp/*,/private/tmp/*
 
-" Show syntax
-syntax on
-
+" Filetype plug activation
+filetype plugin on 
 
 "" Keymaps
 "" -------
@@ -174,11 +170,11 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Strip trailing whitespace (,ss) (thanks mathiasbynens)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+        let save_cursor = getpos(".")
+        let old_query = getreg('/')
+        :%s/\s\+$//e
+        call setpos('.', save_cursor)
+        call setreg('/', old_query)
 endfunction
 
 " Open a URL with `open` (thanks ryanb)
@@ -187,76 +183,38 @@ function! OpenURL()
     let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
     echo s:uri
     if s:uri != ""
-	exec "!open \"" . s:uri . "\""
+        exec "!open \"" . s:uri . "\""
     else
-	echo "No URI found in line"
+        echo "No URI found in line"
     endif
 endfunction
 
 """ BUNDLES
+set rtp+=~/.vim/bundle/Vundle.vim
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim/
-
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 " ------- User bundles go here ---------
-Bundle 'Lokaltog/powerline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'mhinz/vim-startify'
-
-" motion, format
-Bundle 'goldfeld/vim-seek'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'surround.vim'
-Bundle 'Align'
-Bundle 'tComment'
-
-" syntax, filetypes
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'AndrewRadev/vim-eco'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rvm'
-Bundle 'fsouza/go.vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'iptables'
-Bundle 'othree/html5.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'closetag.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'briancollins/vim-jst'
-Bundle 'adimit/prolog.vim'
-Bundle 'cup.vim'
-Bundle 'sh.vim'
-Bundle 'rodjek/vim-puppet'
-Bundle 'rake.vim'
-Bundle 'PProvost/vim-ps1'
-Bundle 'Markdown'
-Bundle 'jrk/vim-ocaml'
-Bundle 'jQuery'
-Bundle 'file-line'
-Bundle 'dccmx/vim-lemon-syntax'
+Plugin 'chrisbra/csv.vim'
 
 " colors
 "Bundle 'Tomorrow-Night-Bright.vim'
+call vundle#end()
 
-if has('ruby')
-    Bundle 'wincent/Command-T'
-    let g:CommandTMatchWindowAtTop=1 " show window at top
-endif
+" Filetype plug activation
+filetype plugin on 
+filetype plugin indent on
+
+" Syntax highlighting
+syntax on
 
 " Automatic commands (if possible)
 if has("autocmd")
-    " Automatically do language-depending indenting when possible
-    filetype plugin indent on
-
+    
     " Treat .json files as .js
     autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 
@@ -269,19 +227,19 @@ if has("autocmd")
 
     " Jump to last known cursor position when editing a file (thanks ryanb)
     autocmd BufReadPost *
-	\ if line("'\"") > 0 && line("'\"") <= line("$") |
-	\   exe "normal g`\"" |
-	\ endif
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
     if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+        set relativenumber
+        au BufReadPost * set relativenumber
 
-	" Use relative numbers except in insert mode or when vim loses focus
-	au FocusLost * set number
-	au InsertEnter * set number
-	au FocusGained * set relativenumber
-	au InsertLeave * set relativenumber
+        " Use relative numbers except in insert mode or when vim loses focus
+        au FocusLost * set number
+        au InsertEnter * set number
+        au FocusGained * set relativenumber
+        au InsertLeave * set relativenumber
     endif
 
     " Do some default formatting for certain files

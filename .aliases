@@ -167,11 +167,3 @@ alias python32="arch -i386 python"
 
 alias please='sudo $(history -p \!\!)' 
 
-## Simple functions to make life easier
-function internet() {
-    address=`cat $1`;
-    open -a "Google Chrome" $address;
-}
-function systest() {
-    cd ~/Documents/Projects/SYSTEST/systems-test/
-}

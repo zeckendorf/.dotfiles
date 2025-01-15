@@ -20,6 +20,9 @@ alias oo="open ."
 # serial comms
 alias mc="minicom -c on -D "
 
+# calendar shortcuts
+alias calnext='icalbuddy -n -f -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -df "%RD" -eed eventsToday | head -n 1'
+alias calnextpf='printf "%s" $(calnext)'
 # volume command wrappers
 alias mute="osascript -e 'set volume 0'"
 alias blast="osascript -e 'set volume 10'"
